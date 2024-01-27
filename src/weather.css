@@ -1,0 +1,131 @@
+.engulf {
+  background: url(https://img.freepik.com/free-photo/mesmerizing-view-fresh-green-fields-cloudy-sky_181624-49447.jpg?w=996&t=st=1706299542~exp=1706300142~hmac=0d496fe16e13a4d18fb8b39fb72f58ff136bacbc7563a1eab40096a7693f0554);
+  font-family: "Ubuntu", sans-serif;
+  max-width: 600px;
+  margin: 45px auto;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+.search {
+  background-color: #f9f7fe;
+  border: none;
+  color: rgba(9, 17, 15, 0.4);
+  font-size: 16px;
+  padding: 15px 20px;
+  width: 80%;
+  border-radius: 6px;
+}
+
+.s-button {
+  margin-left: 5px;
+  font-size: 16px;
+  background-color: #73b5e4;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 6px;
+}
+
+.current-weather {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-now {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.info {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.4);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+#humidity {
+  color: #f65282;
+}
+
+#wind {
+  color: #f65282;
+}
+
+.weather {
+  display: flex;
+}
+
+.emot {
+  width: 88px;
+  height: 88px;
+}
+
+.c-weather {
+  font-size: 88px;
+  line-height: 88px;
+  font-weight: bold;
+}
+
+.intensity {
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.forecast-weather {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.forecast-icon {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.forecast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.all_temperatures {
+  text-align: center;
+  color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.forecast-temp {
+  padding: 0 10px;
+}
+
+footer {
+  border-top: 1px solid #f9f7fe;
+  padding: 30px 0 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  color: #73b5e4;
+  font-weight: 400;
+}
+
+a:hover {
+  color: #f65282;
+}
