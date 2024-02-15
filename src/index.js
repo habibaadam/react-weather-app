@@ -12,12 +12,9 @@ const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
 root.render(
-  <React.StrictMode>
-    <App />
-    <div className="engulf">
-      <Weather />
-      <Overview />
-      <Footer />
-    </div>
-  </React.StrictMode>
+    <><App /><div className="engulf">
+    <Weather />
+    <Overview />
+    <Footer />
+  </div></>
 );
