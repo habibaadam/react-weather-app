@@ -19,7 +19,7 @@ export default function Overview() {
         </div>
         <div className="weather">
           <div id="icon">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" />
+            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"  alt="weather.icon"/>
           </div>
           <div className="c-weather" id="currentW">
             24
