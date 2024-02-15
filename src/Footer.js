@@ -13,12 +13,12 @@ export default function Footer() {
         Habie
       </a>
       and is{" "}
-      <a href="https://github.com/habibaadam/weather-app" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/habibaadam/react-weather-app" target="_blank" rel="noopener noreferrer">
         {" "}
         open-sourced on GitHub
       </a>{" "}
       and
-      <a href="https://weather-bibi.netlify.app/" target="_blank" rel="noopener noreferrer">
+      <a href="https://bibi-react-weather.netlify.app" target="_blank" rel="noopener noreferrer">
         hosted on Netlify
       </a>
     </footer>
