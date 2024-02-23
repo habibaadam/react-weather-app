@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./weather.css";
 import axios from "axios";
 
-export default function Overview() {
+export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
   const [allData, setallData] = useState({done: false});
 
@@ -56,8 +56,7 @@ export default function Overview() {
   );
   } else {
     const apiKey = "fe1483f743b581b5520a1b725af03a49"
-    let city = "San Francisco"
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(displayWeather);
   }
 
