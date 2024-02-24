@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./weather.css";
 import axios from "axios";
+import Friendly from "./Friendly";
 
 export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
@@ -15,7 +16,7 @@ export default function Overview(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
-      date: "Tuesday 10:00pm",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: "https://www.shareicon.net/download/2016/08/18/813198_cloud_512x512.png"
     });
@@ -30,9 +31,9 @@ export default function Overview(props) {
           <h1 className="city-now" id="city-now">
             {allData.city}
           </h1>
-            <p id="time">
-              {allData.date}
-            </p>
+            <div id="time">
+              <Friendly date={allData.date}/>
+            </div>
             <div id="icon" className="for-icon">
             <img src={allData.iconUrl} alt={allData.description} className="img-fluid rounded w-50"/>
           </div>
