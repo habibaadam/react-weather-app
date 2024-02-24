@@ -97,6 +97,16 @@ footer {
   color: rgb(249, 247, 244);
 }
 
+footer a {
+  color: #050204;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #d985e1;
+  transition: all 200ms ease-in-out;
+}
+
 @media only screen and (max-width: 900px) {
  .c-weather {
   font-size: 55px;
@@ -106,7 +116,7 @@ footer {
   .units {
     font-size: 30px;
     margin-top: 10px;
-    
+
   }
 
   .more-info {
