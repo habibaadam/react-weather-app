@@ -5,7 +5,6 @@ import "./weather.css";
 import "bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import Weather from "./Weather";
-import Overview from "./Overview";
 import Footer from "./Footer";
 
 const rootElement = document.getElementById("root");
@@ -15,8 +14,7 @@ root.render(
     <div className="container">
       <App />
       <div className="engulf">
-    <Weather />
-    <Overview  defaultCity = "San Francisco"/>
+      <Weather />
     <Footer />
   </div>
   </div>

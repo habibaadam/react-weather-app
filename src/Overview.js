@@ -7,6 +7,13 @@ export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
   const [allData, setallData] = useState({done: false});
 
+
+  function getData(city){
+    const apiKey = "fe1483f743b581b5520a1b725af03a49"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
+    axios.get(apiUrl).then(displayWeather);
+  }
+
   // function to display the weather data with one state
   function displayWeather(response) {
     console.log(response.data);
@@ -20,6 +27,11 @@ export default function Overview(props) {
       description: response.data.weather[0].description,
       iconUrl: "https://www.shareicon.net/download/2016/08/18/813198_cloud_512x512.png"
     });
+  }
+
+  // if the user is not typing and has tapped on submit, fetch the data
+  if (!props.typing && props.defaultCity !== allData.city) {
+    getData(props.defaultCity);
   }
 
   // if the data is fetched, display the weather data or else wait to fetch data
@@ -46,8 +58,8 @@ export default function Overview(props) {
             {Math.round(allData.temperature)} <span className="units">°C</span>
           </h2>
           <ul className="more-info">
-            <li>Humidity: <strong id="humidity">{allData.humidity}%</strong></li>
-            <li>Wind:<strong id="wind">{allData.wind}km/h</strong></li>
+            <li>H: <strong id="humidity">{allData.humidity}%</strong></li>
+            <li>W:<strong id="wind">{allData.wind}km/h</strong></li>
           </ul>
 
         </div>
@@ -55,10 +67,5 @@ export default function Overview(props) {
       <div className="forecast-weather" id="forecast"></div>
     </main>
   );
-  } else {
-    const apiKey = "fe1483f743b581b5520a1b725af03a49"
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`
-    axios.get(apiUrl).then(displayWeather);
-  }
-
+}
 }
