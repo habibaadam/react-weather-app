@@ -3,6 +3,7 @@ import "./weather.css";
 import axios from "axios";
 import Friendly from "./Friendly";
 import Icon from "./Icon";
+import Temperature from "./Temperature";
 
 export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
@@ -55,9 +56,7 @@ export default function Overview(props) {
 
 
         <div className="col-6">
-          <h2 className="c-weather" id="currentW">
-            {Math.round(allData.temperature)} <span className="units">°C</span>
-          </h2>
+          <Temperature temperature={allData.temperature} />
           <ul className="more-info">
             <li>Humidity | <strong id="humidity">{allData.humidity}%</strong></li>
             <li>Wind | <strong id="wind">{allData.wind}km/h</strong></li>
