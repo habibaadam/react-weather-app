@@ -1,5 +1,5 @@
 body {
- background: linear-gradient(135deg, rgb(9, 9, 9) 10%, #0a0a0a 100%);
+ background: linear-gradient(135deg, rgb(15, 15, 15) 10%, #10030f 100%);
  background-size: 100% 100vh;
 }
 
@@ -126,14 +126,15 @@ footer {
 }
 
 footer a {
-  color: #0a0009;
+  color: #fe07e6;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 footer a:hover {
   color: #d985e1;
   transition: all 200ms ease-in-out;
+  text-decoration: overline;
 }
 
 @media only screen and (max-width: 1000px) {
