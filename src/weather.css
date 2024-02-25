@@ -1,5 +1,5 @@
 body {
- background: linear-gradient(to top, #6D548C 70%, #4D4984 100%);
+ background: linear-gradient(135deg, rgb(37, 19, 52) 10%, #28282b 100%);
  background-size: 100% 100vh;
 }
 
@@ -136,7 +136,7 @@ footer a:hover {
   transition: all 200ms ease-in-out;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
  .c-weather {
   font-size: 65px;
   margin-top: 20px;
