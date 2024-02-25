@@ -19,7 +19,6 @@ export default function Overview(props) {
 
   // function to display the weather data with one state
   function displayWeather(response) {
-    console.log(response.data);
     setallData({
       done: true,
       cordi : response.data.coord,

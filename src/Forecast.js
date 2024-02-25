@@ -21,7 +21,6 @@ export default function Forecast(props) {
 
 
     if (loaded) {
-        console.log(forecast);
         return (
         <div className="forecasting">
             <div className="row">
@@ -33,8 +32,9 @@ export default function Forecast(props) {
                         </div>
                     );
                 } else {
-                    return null;
-                }})}
+                     return null;
+                }
+                })}
             </div>
         </div>
     );
@@ -44,7 +44,7 @@ export default function Forecast(props) {
         let lati = props.cordinates.lat;
         let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lati}&lon=${long}&appid=${apiKey}&units=metric`;
         axios.get(apiUrl).then(displayForecast);
-        
+
         return null;
     }
 

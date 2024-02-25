@@ -3,7 +3,6 @@
     margin-top: 25px;
 }
 
-
 .forecast-min {
     opacity: 0.6;
     margin-left: 10px;
@@ -18,4 +17,5 @@
         font-size: 0.6rem;
         margin-top: 20px;
     }
+
 }
