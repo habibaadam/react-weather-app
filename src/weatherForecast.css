@@ -1,0 +1,21 @@
+.forecasting {
+    color: white;
+    margin-top: 25px;
+}
+
+
+.forecast-min {
+    opacity: 0.6;
+    margin-left: 10px;
+}
+
+.forecast-day {
+    margin-left: 5px;
+}
+
+@media (max-width: 1000px) {
+    .forecasting {
+        font-size: 0.6rem;
+        margin-top: 20px;
+    }
+}

@@ -4,6 +4,7 @@ import axios from "axios";
 import Friendly from "./Friendly";
 import Icon from "./Icon";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 
 export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
@@ -21,6 +22,7 @@ export default function Overview(props) {
     console.log(response.data);
     setallData({
       done: true,
+      cordi : response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
@@ -49,7 +51,7 @@ export default function Overview(props) {
               <Friendly date={allData.date}/>
             </div>
             <div id="icon" className="for-icon">
-            <Icon icon={allData.icon}/>
+            <Icon icon={allData.icon} size={100}/>
           </div>
           <p className="description text-capitalize">{allData.description}</p>
         </div>
@@ -64,7 +66,7 @@ export default function Overview(props) {
 
         </div>
       </div>
-      <div className="forecast-weather" id="forecast"></div>
+        <Forecast size={36} cordinates={allData.cordi}/>
     </main>
   );
 }
