@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./weather.css";
 import axios from "axios";
 import Friendly from "./Friendly";
+import Icon from "./Icon";
 
 export default function Overview(props) {
   // setting a state for the weather data to be not displayed yet, but displayed after the data is fetched
@@ -25,7 +26,7 @@ export default function Overview(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
-      iconUrl: "https://www.shareicon.net/download/2016/08/18/813198_cloud_512x512.png"
+      icon: response.data.weather[0].icon
     });
   }
 
@@ -47,7 +48,7 @@ export default function Overview(props) {
               <Friendly date={allData.date}/>
             </div>
             <div id="icon" className="for-icon">
-            <img src={allData.iconUrl} alt={allData.description} className="img-fluid rounded w-50"/>
+            <Icon icon={allData.icon}/>
           </div>
           <p className="description text-capitalize">{allData.description}</p>
         </div>
@@ -58,8 +59,8 @@ export default function Overview(props) {
             {Math.round(allData.temperature)} <span className="units">°C</span>
           </h2>
           <ul className="more-info">
-            <li>H: <strong id="humidity">{allData.humidity}%</strong></li>
-            <li>W:<strong id="wind">{allData.wind}km/h</strong></li>
+            <li>Humidity | <strong id="humidity">{allData.humidity}%</strong></li>
+            <li>Wind | <strong id="wind">{allData.wind}km/h</strong></li>
           </ul>
 
         </div>

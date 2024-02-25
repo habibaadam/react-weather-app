@@ -39,6 +39,7 @@ h1.city-now {
   font-weight: 300;
   margin: 0px;
   color: rgb(249, 247, 244);
+  margin-top: 10px;
 }
 
 p {
@@ -50,10 +51,12 @@ p {
 
 .description {
   font-weight: 500;
+  margin-top: 10px;
+  margin-left: 5px;
 }
 
 img.img-fluid {
-  max-width: 70px;
+  max-width: 100px;
   margin-top: 0px;
 }
 
@@ -70,7 +73,8 @@ ul {
   color: rgb(249, 247, 244);
   font-weight: 150;
   margin-left: 75px;
-  margin-top: -10px;
+  margin-top: 35px;
+  margin-bottom: 40px;
 }
 
 .units {
@@ -109,18 +113,19 @@ footer a:hover {
 
 @media only screen and (max-width: 900px) {
  .c-weather {
-  font-size: 55px;
+  font-size: 65px;
   margin-top: 20px;
+  margin-left: 56px;
+  margin-bottom: 20px;
  }
 
   .units {
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 40px;
 
   }
 
   .more-info {
-    font-size: 15px;
-    margin-left: 25px;
+    font-size: 10px;
+    margin-left: 30px;
   }
 }
