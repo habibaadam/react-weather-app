@@ -13,9 +13,11 @@ const root = createRoot(rootElement);
 root.render(
     <div className="container">
       <App />
+      <div className="engulf-background">
       <div className="engulf">
       <Weather />
     <Footer />
+  </div>
   </div>
   </div>
 );
