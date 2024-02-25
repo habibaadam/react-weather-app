@@ -1,5 +1,5 @@
 body {
- background: linear-gradient(135deg, rgb(15, 15, 15) 10%, #10030f 100%);
+ background: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/0E8C/production/_104642730_southam.jpg");
  background-size: 100% 100vh;
 }
 
@@ -126,13 +126,13 @@ footer {
 }
 
 footer a {
-  color: #fe07e6;
+  color: #140213;
   text-decoration: none;
   font-weight: bold;
 }
 
 footer a:hover {
-  color: #d985e1;
+  color: #e485f0;
   transition: all 200ms ease-in-out;
   text-decoration: overline;
 }
