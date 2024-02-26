@@ -15,7 +15,7 @@ root.render(
       <App />
       <div className="engulf-background">
       <div className="engulf">
-      <Weather />
+      <Weather defaultCity="San Francisco" />
     <Footer />
   </div>
   </div>
